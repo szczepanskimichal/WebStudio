@@ -8,3 +8,11 @@
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: $tablet-size) {
+  .menu-toggle,
+  .js-opne,
+  .mobile__icon-menu,
+  .menu-container {
+    display: none;
+  }
+}
