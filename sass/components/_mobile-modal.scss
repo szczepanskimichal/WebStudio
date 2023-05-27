@@ -1,0 +1,113 @@
+.menu-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transform: translateX(100vw);
+
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  padding: 21px 25px 48px 40px;
+
+  transition: 0.3s;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.menu-toggle {
+  border: 0;
+  background-color: transparent;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $brand-blue;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.mobile__button-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &__icon-menu:hover,
+  &__icon-menu:focus {
+    fill: $brand-blue;
+  }
+
+  &__links {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2.94;
+    letter-spacing: 0.02em;
+    color: $brand-black;
+  }
+
+  &__item {
+    color: $brand-black;
+  }
+
+  &__item:hover,
+  &__item:focus {
+    color: $brand-blue;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.02em;
+    color: $brand-blue;
+  }
+  &__phone:focus,
+  &__phone:hover {
+    color: $brand-black;
+  }
+
+  &__email {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.02em;
+    color: $brand-grey;
+  }
+  &__email:focus,
+  &__email:hover {
+    color: $brand-blue;
+  }
+
+  &__social-links {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.375;
+    letter-spacing: 0.02em;
+    color: $brand-blue;
+    border-right: 1px solid $brand-grey;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  &__social-links:nth-child(4) {
+    border: 0;
+  }
+}
