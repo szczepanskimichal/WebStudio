@@ -58,6 +58,56 @@
             >
           </li>
         </ul>
+        <button
+          class="menu-navigation__button menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-navigation__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-close_40px"></use>
+          </svg>
+        </button>
+        <ul class="menu-navigation__links">
+          <li>
+            <a class="menu-navigation__link--agency" href="index.html"
+              >Agencja</a
+            >
+          </li>
+          <li>
+            <a class="menu-navigation__link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a class="menu-navigation__link" href="#">Kontakt</a>
+          </li>
+        </ul>
+        <div class="menu-container__box">
+          <div class="menu-container__contact">
+            <a class="menu-container__phone" href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+            <a class="menu-container__mail" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </div>
+          <ul class="menu-container__media">
+            <li>
+              <a class="menu-container__media-link" href="#">Instagram</a>
+            </li>
+            <li><div class="menu-container__line"></div></li>
+            <li><a class="menu-container__media-link" href="#">Twitter</a></li>
+            <li><div class="menu-container__line"></div></li>
+            <li><a class="menu-container__media-link" href="#">Facebook</a></li>
+            <li><div class="menu-container__line"></div></li>
+            <li><a class="menu-container__media-link" href="#">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -158,49 +208,49 @@
       <section>
         <div class="container section description">
           <ul class="description__list">
-            <li>
+            <li class="description__item">
               <div class="description__icon">
                 <svg width="70" height="70">
                   <use href="images/icons.svg#icon-antenna-1"></use>
                 </svg>
               </div>
-              <h3 class="tertiary-heading">LOREM IPSUM</h3>
+              <h3 class="description__heading">lorem ipsum</h3>
               <p class="description__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="description__item">
               <div class="description__icon">
                 <svg width="70" height="70">
                   <use href="images/icons.svg#icon-clock-1"></use>
                 </svg>
               </div>
-              <h3 class="tertiary-heading">LOREM IPSUM</h3>
+              <h3 class="description__heading">lorem ipsum</h3>
               <p class="description__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="description__item">
               <div class="description__icon">
                 <svg width="70" height="70">
                   <use href="images/icons.svg#icon-diagram-1"></use>
                 </svg>
               </div>
-              <h3 class="tertiary-heading">LOREM IPSUM</h3>
+              <h3 class="description__heading">lorem ipsum</h3>
               <p class="description__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
               </p>
             </li>
-            <li>
+            <li class="description__item">
               <div class="description__icon">
                 <svg width="70" height="70">
                   <use href="images/icons.svg#icon-astronaut-1"></use>
                 </svg>
               </div>
-              <h3 class="tertiary-heading">LOREM IPSUM</h3>
+              <h3 class="description__heading">lorem ipsum</h3>
               <p class="description__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                 arcu sem. Sed non sodales dui. Interdum et malesuada
@@ -211,33 +261,42 @@
       </section>
       <!-- Czym się zajmujemy -->
       <section>
-        <div class="container section activity top-padding-none">
+        <div class="container section activity">
           <h2 class="secondary-heading">Czym się zajmujemy</h2>
           <ul class="activity__list">
             <li class="activity__item">
               <img
-                src="./images/what_we_do/Computer.jpg"
+                src="./images/What_we_do/computer-370.jpg"
+                srcset="
+                  ./images/What_we_do/computer-370.jpg    370w,
+                  ./images/What_we_do/computer-370@2x.jpg 640w
+                "
+                sizes="370px"
                 alt="Komputer"
-                width="370"
-                height="294"
               />
               <div class="activity__description">aplikacje komputerowe</div>
             </li>
             <li class="activity__item">
               <img
-                src="images/what_we_do/Laptop.jpg"
+                src="./images/What_we_do/laptop-370.jpg"
+                srcset="
+                  ./images/What_we_do/laptop-370.jpg    370w,
+                  ./images/What_we_do/laptop-370@2x.jpg 640w
+                "
+                sizes="370px"
                 alt="Laptop"
-                width="370"
-                height="294"
               />
               <div class="activity__description">aplikacje mobilne</div>
             </li>
             <li class="activity__item">
               <img
-                src="images/what_we_do/Tablet.jpg"
+                src="./images/What_we_do/tablet-370.jpg"
+                srcset="
+                  ./images/What_we_do/tablet-370.jpg    370w,
+                  ./images/What_we_do/tablet-370@2x.jpg 640w
+                "
+                sizes="370px"
                 alt="Tablet"
-                width="370"
-                height="294"
               />
               <div class="activity__description">rozwiązania graficzne</div>
             </li>
@@ -251,10 +310,17 @@
           <ul class="team__list">
             <li class="team__card">
               <img
-                src="images/Our_staff/John1.jpg"
+                src="./images/Our_staff/John1/john1-270.jpg"
+                srcset="
+                  ./images/Our_staff/John1/john1-270.jpg    270w,
+                  ./images/Our_staff/John1/john1-354.jpg    354w,
+                  ./images/Our_staff/John1/john1-450.jpg    450w,
+                  ./images/Our_staff/John1/john1-270@2x.jpg 540w,
+                  ./images/Our_staff/John1/john1-354@2x.jpg 708w,
+                  ./images/Our_staff/John1/john1-450@2x.jpg 900w
+                "
+                sizes="(max-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
                 alt="John Doe"
-                width="270"
-                height="260"
               />
               <p class="team__name">John Doe</p>
               <p class="team__job">Product Designer</p>
@@ -293,10 +359,17 @@
             </li>
             <li class="team__card">
               <img
-                src="images/Our_staff/John2.jpg"
+                src="./images/Our_staff/John2/john2-270.jpg"
+                srcset="
+                  ./images/Our_staff/John2/john2-270.jpg    270w,
+                  ./images/Our_staff/John2/john2-354.jpg    354w,
+                  ./images/Our_staff/John2/john2-450.jpg    450w,
+                  ./images/Our_staff/John2/john2-270@2x.jpg 540w,
+                  ./images/Our_staff/John2/john2-354@2x.jpg 708w,
+                  ./images/Our_staff/John2/john2-450@2x.jpg 900w
+                "
+                sizes="(max-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
                 alt="John Doe"
-                width="270"
-                height="260"
               />
               <p class="team__name">John Doe</p>
               <p class="team__job">Frontend Developer</p>
@@ -335,10 +408,17 @@
             </li>
             <li class="team__card">
               <img
-                src="images/Our_staff/John3.jpg"
+                src="./images/Our_staff/John3/john3-270.jpg"
+                srcset="
+                  ./images/Our_staff/John3/john3-270.jpg    270w,
+                  ./images/Our_staff/John3/john3-354.jpg    354w,
+                  ./images/Our_staff/John3/john3-450.jpg    450w,
+                  ./images/Our_staff/John3/john3-270@2x.jpg 540w,
+                  ./images/Our_staff/John3/john3-354@2x.jpg 708w,
+                  ./images/Our_staff/John3/john3-450@2x.jpg 900w
+                "
+                sizes="(max-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
                 alt="John Doe"
-                width="270"
-                height="260"
               />
               <p class="team__name">John Doe</p>
               <p class="team__job">Marketing</p>
@@ -377,10 +457,17 @@
             </li>
             <li class="team__card">
               <img
-                src="images/Our_staff/John4.jpg"
+                src="./images/Our_staff/John4/john4-270.jpg"
+                srcset="
+                  ./images/Our_staff/John4/john4-270.jpg    270w,
+                  ./images/Our_staff/John4/john4-354.jpg    354w,
+                  ./images/Our_staff/John4/john4-450.jpg    450w,
+                  ./images/Our_staff/John4/john4-270@2x.jpg 540w,
+                  ./images/Our_staff/John4/john4-354@2x.jpg 708w,
+                  ./images/Our_staff/John4/john4-450@2x.jpg 900w
+                "
+                sizes="(max-width: 480px) 450px, (min-width: 768px) 354px, (min-width: 1200px) 270px"
                 alt="John Doe"
-                width="270"
-                height="260"
               />
               <p class="team__name">John Doe</p>
               <p class="team__job">UI Designer</p>
@@ -473,24 +560,25 @@
     </main>
     <footer class="footer">
       <div class="container footer__box">
-        <div class="footer__navigation">
-          <a class="footer__logo" href="index.html">
-            <span class="footer__logo-web">Web</span
-            ><span class="footer__logo-studio">Studio</span></a
-          >
+        <div class="footer__box-second">
+          <div class="footer__navigation">
+            <a class="footer__logo" href="index.html">
+              <span class="footer__logo-web">Web</span
+              ><span class="footer__logo-studio">Studio</span></a
+            >
 
-          <address class="footer__address">
-            m. Warszawa, Aleje Jerozolimskie 21
-          </address>
+            <address class="footer__address">
+              m. Warszawa, Aleje Jerozolimskie 21
+            </address>
 
-          <a
-            class="footer__link footer__link--marg"
-            href="mailto:info@example.com"
-            >info@example.com</a
-          >
-          <a class="footer__link" href="tel:+48111111111">+48 111 111 111</a>
-        </div>
-        <div class="footer__box__second">
+            <a
+              class="footer__link footer__link--marg"
+              href="mailto:info@example.com"
+              >info@example.com</a
+            >
+            <a class="footer__link" href="tel:+48111111111">+48 111 111 111</a>
+          </div>
+
           <div class="footer-media">
             <p class="footer-media__heading">dołącz do nas</p>
             <ul class="footer-media__icons-list">
@@ -524,26 +612,33 @@
               </li>
             </ul>
           </div>
-          <div class="newsletter">
-            <p class="newsletter__heading">zapisz się do newslettera</p>
-            <form class="newsletter__form">
-              <input
-                class="newsletter__input"
-                type="email"
-                name="newsletter_email"
-                placeholder="E-mail"
-              />
-              <button class="newsletter__button" type="submit">
-                Zapisz się
-                <svg class="newsletter__button-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
+        </div>
+        <div class="newsletter">
+          <p class="newsletter__heading">zapisz się do newslettera</p>
+          <form class="newsletter__form">
+            <input
+              class="newsletter__input"
+              type="email"
+              name="newsletter_email"
+              placeholder="E-mail"
+            />
+            <button class="newsletter__button" type="submit">
+              Zapisz się
+              <svg class="newsletter__button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
