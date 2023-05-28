@@ -37,9 +37,17 @@
     padding: 0;
     margin: 0;
     gap: 30px;
+    flex-wrap: wrap;
   }
   section {
     padding: 0;
     margin: 0;
+  }
+  .ourCustomers {
+    padding-top: 60px;
+    margin: 0;
+  }
+  .ourCustomers__picture {
+    margin-bottom: 15px;
   }
 }

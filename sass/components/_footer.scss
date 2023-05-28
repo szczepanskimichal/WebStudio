@@ -194,3 +194,22 @@
     color: $just-white;
   }
 }
+@media (max-width: $mobile-size) {
+  .footer__joinUs {
+    padding: 0;
+    margin: 0;
+  }
+  .footer__newsletter {
+    padding: 0;
+    margin: 0;
+  }
+  .footer__newsletter form {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    max-width: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}

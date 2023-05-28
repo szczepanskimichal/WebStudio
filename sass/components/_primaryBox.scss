@@ -27,10 +27,12 @@
 }
 @media (max-width: $mobile-size) {
   .containerPrimaryBox {
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
-  .primaryBox {
+  .container {
+    margin: 0;
     padding: 0;
   }
 }
