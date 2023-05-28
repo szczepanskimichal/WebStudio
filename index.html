@@ -56,7 +56,108 @@
             >
           </li>
         </ul>
-        
+        <button data-modal-open type="button" class="primaryBox__button">
+          Order the service
+        </button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <!-- This is modal -->
+            <div class="modal--margin">
+              <p class="modal__text">Zostaw swoje dane w formularzu poniżej</p>
+              <form class="modal__formList" autocomplete="on">
+                <label class="modal__formLabel" for="user_name"
+                  >Imię
+                  <input
+                    name="user_name"
+                    class="modal__input"
+                    id="user_name"
+                    type="text"
+                    required
+                  />
+                  <svg class="modal__iconName" width="15" height="15">
+                    <use
+                      href="./images/icons.svg#icon-person-black-18dp-1"
+                    ></use>
+                  </svg>
+                </label>
+                <label class="modal__formLabel" for="phone_number"
+                  >Telefon
+                  <input
+                    name="phone_number"
+                    class="modal__input"
+                    id="phone_number"
+                    type="tel"
+                    title="Wprowadź numer w foracie 111-111-111"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                    required
+                  />
+                  <svg class="modal__iconPhone" width="13" height="13">
+                    <use
+                      href="./images/icons.svg#icon-phone-black-18dp-1"
+                    ></use>
+                  </svg>
+                </label>
+                <label class="modal__formLabel" for="email"
+                  >Email
+                  <input
+                    name="email"
+                    class="modal__input"
+                    id="email"
+                    type="email"
+                    required
+                  />
+                  <svg class="modal__iconMail" width="15" height="12">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </label>
+                <div>
+                  <label for="feedback" class="modal__comment">Komentarz</label>
+                  <textarea
+                    id="feedback"
+                    name="feedback"
+                    placeholder="Wprowadź tekst"
+                    rows="5"
+                    class="modal__feedback"
+                  ></textarea>
+                </div>
+                <div class="modal__checkbox">
+                  <label id="policy" class="modal__policy">
+                    <svg width="17px" height="16px" class="modal__check-icon">
+                      <use href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                    <input
+                      type="checkbox"
+                      value="policy"
+                      required
+                      class="modal__check-icon--margin"
+                    />
+                    <span class="modal__policyStatement">
+                      Oświadczam iż akceptuję
+                      <a href="" class="modal__modal-links"> Regulamin</a>
+                      i
+                      <a href="" class="modal__modal-links">
+                        Politykę Prywatności</a
+                      >
+                    </span>
+                  </label>
+                </div>
+
+                <button class="modal__button" type="submit">Wyślij</button>
+              </form>
+            </div>
+            <div>
+              <button class="modal__buttonClose" data-modal-close type="button">
+                <svg width="18px" height="18px">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <script src="./js/modal.js"></script>
+      </div>
+    </div>
           <button
             class="menu-navigation__button menu-toggle js-open-menu"
             aria-expanded="false"
