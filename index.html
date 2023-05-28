@@ -17,6 +17,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <header class="pageHeader">
@@ -25,7 +28,6 @@
           <a class="logo" href="./index.html"
             ><span class="logo__web">Web</span><span class="logo__studio">Studio</span></a
           >
-
           <ul class="nav__list">
             <li>
               <a class="nav__agency" href="./index.html">Agency</a>
@@ -54,17 +56,15 @@
             >
           </li>
         </ul>
-        <div class="menu-container">
-          <button
-            class="menu-toggle js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg width="40px" height="40px" class="mobile__icon-menu">
-              <use href="./images/icons.svg#icon-menu" height="16px" y="12"></use>
-            </svg>
-          </button>
-        </div>
+        <button
+          class="menu-navigation__button menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-navigation__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
