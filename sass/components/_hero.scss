@@ -62,7 +62,7 @@
 
     &:nth-child(2)::before {
       content: "";
-      background-image: url("../images/Icons/Form/Vector.svg");
+      background-image: url("../images/icons/Form/Vector.svg");
       width: 16px;
       height: 15px;
       display: flex;
@@ -76,7 +76,7 @@
 
     &:nth-child(3)::before {
       content: "";
-      background-image: url("../images/Icons/Form/icon\ check.svg");
+      background-image: url("../images/icons/Form/icon\ check.svg");
       width: 16px;
       height: 15px;
       display: flex;
@@ -198,7 +198,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/Background/bg480.jpg");
+    url("./images/background/bg480.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -211,7 +211,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/Background/bg480@2x.jpg");
+      url("./images/background/bg480@2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -223,7 +223,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/Background/bg768.jpg");
+      url("../images/background/bg768.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -235,7 +235,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("../images/Background/bg768@2x.jpg");
+        url("../images/background/bg768@2x.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -248,7 +248,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/Background/bg1600.jpg");
+      url("../imagesbBackground/bg1600.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -260,7 +260,7 @@
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url("../images/Background/bg1600@2x.jpg");
+        url("../images/background/bg1600@2x.jpg");
     }
   }
 
