@@ -1,0 +1,315 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    @media screen and (max-width: 480px) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+  }
+
+  &__contacts {
+    width: 321px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-direction: column;
+      row-gap: 10px;
+      width: auto;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $headerLinkColor;
+    display: flex;
+    align-items: center;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: 1.1;
+    }
+
+    &:hover,
+    &:focus {
+      color: $hoverColor;
+
+      & svg use,
+      & svg use {
+        fill: $hoverColor;
+      }
+    }
+  }
+
+  &__mail-icon {
+    fill: #757575;
+    margin-right: 10px;
+    display: block;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__phone-icon {
+    fill: #757575;
+    margin-right: 10px;
+    display: block;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $backgroundColor;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  &__line {
+    width: 22px;
+    height: 0px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
+
+  &__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $headerLinkColor;
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+
+    &-link {
+      font-weight: 500px;
+      color: $hoverColor;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__phone {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $hoverColor;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: $backgroundColor;
+}
+
+.menu-navigation {
+  &__button {
+    background-color: $backgroundColor;
+    padding: 0;
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+      drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  &__link {
+    color: $mainColor;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.18;
+
+    &:hover,
+    &:focus {
+      color: $hoverColor;
+    }
+
+    &--agency,
+    &--portfolio {
+      color: $hoverColor;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.18;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  max-width: 514px;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  @media screen and (max-width: 480px) {
+    display: block;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__link {
+    color: $mainColor;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.1;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $hoverColor;
+    }
+
+    &--agency,
+    &--portfolio {
+      color: $hoverColor;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.1;
+      position: relative;
+    }
+
+    &--agency::after {
+      content: "";
+      background-color: $hoverColor;
+      width: 51px;
+      height: 4px;
+      border-radius: 2px;
+      position: absolute;
+      top: 44px;
+      display: block;
+
+      @media screen and (min-width: 767px) and (max-width: 1199px) {
+        position: absolute;
+        top: 50px;
+      }
+    }
+
+    &--portfolio::after {
+      content: "";
+      background-color: $hoverColor;
+      width: 55px;
+      height: 4px;
+      border-radius: 2px;
+      position: absolute;
+      top: 44px;
+      display: block;
+
+      @media screen and (min-width: 767px) and (max-width: 1199px) {
+        position: absolute;
+        top: 50px;
+      }
+    }
+  }
+
+  &__links {
+    width: 254px;
+    justify-content: space-between;
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      max-width: 282px;
+    }
+  }
+
+  &__logo {
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    margin-right: 0;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1199px) {
+      margin-right: 83px;
+    }
+
+    &-studio {
+      color: #000;
+    }
+
+    &-web {
+      color: $hoverColor;
+    }
+  }
+}

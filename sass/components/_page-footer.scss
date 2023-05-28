@@ -1,0 +1,231 @@
+.footer {
+  background-color: $footerBackground;
+  max-width: 480px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+  }
+
+  &__address {
+    font-size: 14px;
+    line-height: 1.71;
+    color: $backgroundColor;
+    font-style: normal;
+    margin-bottom: 9px;
+  }
+
+  &__box {
+    flex-direction: column;
+    row-gap: 60px;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    &-second {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 60px;
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 61px;
+        padding-right: 74px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        column-gap: 70px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    color: $footerLinkColor;
+
+    &--marg {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__logo {
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    margin-bottom: 20px;
+
+    &-studio {
+      color: $backgroundColor;
+    }
+
+    &-web {
+      color: $hoverColor;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      align-items: flex-start;
+    }
+  }
+}
+
+.footer-media {
+  width: 206px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    padding-top: 12px;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $backgroundColor;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    display: block;
+  }
+
+  &__icons {
+    padding: 12px;
+    border-radius: 50%;
+    fill: $backgroundColor;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: block;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $hoverColor;
+    }
+
+    &-list {
+      column-gap: 10px;
+    }
+  }
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 570px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 12px;
+  }
+
+  &__button {
+    background: $hoverColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $backgroundColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+
+    &-icon {
+      margin-left: 24px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      justify-content: stretch;
+      flex-direction: row;
+      column-gap: 12px;
+      max-height: 50px;
+    }
+  }
+
+  &__heading {
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $backgroundColor;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: $footerBackground;
+    outline: 0;
+    padding: 15px 0 15px 16px;
+    font-size: 16px;
+    color: $backgroundColor;
+    line-height: 1.25;
+    width: 100%;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $hoverColor;
+    }
+  }
+}
