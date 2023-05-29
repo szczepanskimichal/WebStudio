@@ -61,8 +61,8 @@
     }
 
     &:nth-child(2)::before {
-      content: " ";
-      background-image: url("../images/icons/form/Vector.svg");
+      content: "";
+      background-image: url("../images/Icons/form/Vector.svg");
       width: 16px;
       height: 15px;
       display: flex;
@@ -74,9 +74,9 @@
       opacity: 0;
     }
 
-    &:nth-child(3)::after {
+    &:nth-child(3)::before {
       content: "";
-      background-image: url("../images/icons/form/icon-check");
+      background-image: url("../images/Icons/form/icon check.svg");
       width: 16px;
       height: 15px;
       display: flex;
@@ -207,7 +207,11 @@
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url("../images/background/bg480@2x.jpg");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/background/bg480@2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
