@@ -1,1 +1,1 @@
-https://szczepanskimichal.github.io/webstudio/
+https://szczepanskimichal.github.io/WebStudio/
