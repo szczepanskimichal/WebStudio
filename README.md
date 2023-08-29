@@ -1,1 +1,1 @@
-https://szczepanskimichal.github.io/WebStudio/
+https://szczepanskimichal.github.io/goit-markup-hw-08/
